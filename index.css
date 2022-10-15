@@ -21,3 +21,18 @@ header {
   background-color: #f0f0f0;
   align-items: center;
 }
+.cards{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px;
+}
+tr{
+  text-align: center;
+}
