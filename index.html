@@ -2,9 +2,19 @@
 <html>
 <head>
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+  <SCRIPT language="JavaScript">
+    function calc_total(){
+      sum = 0;
+      for (i=0; i<document.myform.length-1; i++){
+        if (document.myform.elements[i].checked){
+          sum += eval(document.myform.elements[i].value);
+        }
+      }
+      document.myform.answer.value = "数字は" + sum + "です";
+    }
+    </SCRIPT>
   <meta charset="UTF-8">
-  <title>guess-day</title>
+  <title>GUESS DAY</title>
 </head>
 <body>
   <header>
@@ -17,7 +27,7 @@
       <div class="text">日付(1~31の数字)を当てるゲームです。</div>
       <div class="text">選んだ数字が含まれているカードを選択してください。</div>
       <div class="cards">
-        <div class="card card-1">
+        <div class="card card_1">
           <table border="1" cellpadding="6" cellspacing="5">
             <caption>Card 1</caption>
             <tr>
@@ -34,7 +44,7 @@
             </tr>
           </table>
         </div>
-        <div class="card card-2">
+        <div class="card card_2">
           <table border="1" cellpadding="6" cellspacing="5">
             <caption>Card 2</caption>
             <tr>
@@ -51,7 +61,7 @@
             </tr>
           </table>
         </div>
-        <div class="card card-3">
+        <div class="card card_3">
           <table border="1" cellpadding="6" cellspacing="5">
             <caption>Card 3</caption>
             <tr>
@@ -68,7 +78,7 @@
             </tr>
           </table>
         </div>
-        <div class="card card-4">
+        <div class="card card_4">
           <table border="1" cellpadding="6" cellspacing="5">
             <caption>Card 4</caption>
             <tr>
@@ -85,7 +95,7 @@
             </tr>
           </table>
         </div>
-        <div class="card card-5">
+        <div class="card card_5">
           <table border="1" cellpadding="6" cellspacing="5">
           <caption>Card 5</caption>
           <tr>
@@ -103,6 +113,27 @@
         </table>
         </div>
       </div>
+      <form name="myform">
+      <fieldset>
+        <legend>カードを選んでください</legend>
+        <div>
+          <label><input type="checkbox" onClick="calc_total()" value="1">Card 1</label>
+        </div>
+        <div>
+          <label><input type="checkbox" onClick="calc_total()" value="2">Card 2</label>
+        </div>
+        <div>
+          <label><input type="checkbox" onClick="calc_total()" value="4">Card 3</label>
+        </div>
+        <div>
+          <label><input type="checkbox" onClick="calc_total()" value="8">Card 4</label>
+        </div>
+        <div>
+          <label><input type="checkbox" onClick="calc_total()" value="16">Card 5</label>
+        </div>
+        <input type="text" name="answer">
+      </fieldset>
+      </form>
     </div>
   </div>
 </body>

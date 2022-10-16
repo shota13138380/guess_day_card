@@ -16,23 +16,37 @@ header {
   width: 50%;
   margin-left: 30px;
 }
-.contents{
+.contents {
   height: 100vh;
   background-color: #f0f0f0;
   align-items: center;
 }
-.cards{
+.inner{
+  max-width: 1024px;
+  margin: auto;
+}
+.cards {
   display: flex;
   justify-content: space-around;
 }
-.card{
+.card {
   background-color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 5px;
   margin: 5px;
 }
-tr{
+tr {
   text-align: center;
+}
+label {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+input {
+  margin: .4rem;
+}
+form {
+  width: 20%;
+  margin: 5px;
 }
