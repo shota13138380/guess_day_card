@@ -41,9 +41,11 @@ tr {
   text-align: center;
 }
 label {
+  cursor: pointer;
   font: 1rem 'Fira Sans', sans-serif;
 }
 input {
+  cursor: pointer;
   margin: .4rem;
 }
 form {
